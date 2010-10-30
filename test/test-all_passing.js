@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 var sys = require('sys')
+=======
+if (module == require.main) {
+  return require('../lib/async_testing').run(process.ARGV);
+}
+>>>>>>> 2295251ccf52f6c31777e73e3663128d006facd9
 
 module.exports = {
   'test A': function(test) {
@@ -21,6 +27,7 @@ module.exports = {
     test.finish();
   }
 };
+<<<<<<< HEAD
 
 if (module == require.main) {
    //require('../lib/async_testing').run(__filename, process.ARGV);
@@ -29,3 +36,5 @@ if (module == require.main) {
    		function(report){sys.puts(sys.inspect(report));}
    });
 }
+=======
+>>>>>>> 2295251ccf52f6c31777e73e3663128d006facd9
