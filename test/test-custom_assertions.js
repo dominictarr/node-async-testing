@@ -1,4 +1,4 @@
-var async_testing = require('../lib/async_testing')
+var async_testing = require('async_testing')
   , assert = require('assert')
   ;
 

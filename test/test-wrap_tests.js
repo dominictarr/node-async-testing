@@ -1,4 +1,4 @@
-var async_testing = require('../lib/async_testing');
+var async_testing = require('async_testing');
 
 function wrapTestsWrapper(func) {
   return function(test) {
