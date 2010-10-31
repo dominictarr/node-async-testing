@@ -4,9 +4,9 @@ exports['test sync error'] = function(test) {
 };
 
 exports['test async error'] = function(test) {
-  setTimeout(function() {
+  process.nextTick(function() {
       throw new Error();
-    }, 500);
+    });
 };
 
 if (module == require.main) {

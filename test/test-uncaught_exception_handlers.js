@@ -17,9 +17,9 @@ exports['test catch async error'] = function(test) {
     test.finish();
   }
 
-  setTimeout(function() {
+  process.nextTick(function() {
       throw e;
-    }, 500);
+    });
 };
 
 exports['test sync error fail'] = function(test) {
@@ -41,9 +41,9 @@ exports['test async error fail'] = function(test) {
     test.finish();
   }
 
-  setTimeout(function() {
+  process.nextTick(function() {
       throw e;
-    }, 500);
+    });
 };
 
 exports['test sync error async fail'] = function(test) {
@@ -65,9 +65,9 @@ exports['test async error async fail'] = function(test) {
     test.finish();
   }
 
-  setTimeout(function() {
+  process.nextTick(function() {
       throw e;
-    }, 500);
+    });
 };
 
 exports['test sync error error again'] = function(test) {
@@ -87,9 +87,9 @@ exports['test async error error again'] = function(test) {
     throw new Error('second error');
   }
 
-  setTimeout(function() {
+  process.nextTick(function() {
       throw e;
-    }, 500);
+    });
 };
 
 exports['test sync error error again async'] = function(test) {
@@ -113,9 +113,9 @@ exports['test async error error again async'] = function(test) {
       });
   }
 
-  setTimeout(function() {
+  process.nextTick(function() {
       throw e;
-    }, 500);
+    });
 };
 
 if (module == require.main) {

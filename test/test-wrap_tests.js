@@ -70,9 +70,9 @@ exports['test teardown'] = teardownWrapper(function(test) {
 exports['test teardown async'] = teardownWrapper(function(test) {
   test.numAssertions = 1;
 
-  setTimeout(function() {
+  process.nextTick(function() {
       test.finish();
-    }, 500);
+    });
 });
 
 if (module == require.main) {

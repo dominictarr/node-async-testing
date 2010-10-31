@@ -10,15 +10,15 @@ exports['test sync error'] = function(test) {
 };
 
 exports['test async error 2'] = function(test) {
-  setTimeout(function() {
+  process.nextTick(function() {
       throw new Error();
-    }, 500);
+    });
 };
 
 exports['test async error 3'] = function(test) {
-  setTimeout(function() {
+  process.nextTick(function() {
       throw new Error();
-    }, 500);
+    });
 };
 
 if (module == require.main) {
